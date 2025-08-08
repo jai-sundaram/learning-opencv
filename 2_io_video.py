@@ -16,7 +16,7 @@ ret = True
 while ret == True:
     #frame is the actual frame
     ret, frame = video.read()
-    #first all we want to execute this only if the frame is actually sucessfully read 
+    #first all we want to execute this only if the frame is actually sucessfully read
     #let us show the frame
     cv2.imshow('frame', frame)
     #we want to wait to wait the amount of time of like how often one frame happens
@@ -26,3 +26,8 @@ while ret == True:
     #this makes it so that the video actually plays at the correct playback speed - 24fps
     #so basically one frame takes 41 ms, so wait 41 ms between each frame
     cv2.waitKey(41)
+#these lines actually makes sure that like we actually end and exit out of the video
+#frees up the resources that were used for the video
+video.release()
+#destroy the window that was created by opencv
+cv2.destroyAllWindows()
