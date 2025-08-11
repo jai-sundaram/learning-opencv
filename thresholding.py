@@ -48,6 +48,6 @@ thresh = cv2.adaptiveThreshold(handwriting_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSI
 
 
 
-cv2.imshow('thresh', thresh)
+cv2.imshow('thresh', thresh )
 cv2.waitKey(0)
 
